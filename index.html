@@ -3,264 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="André Lucas — Engenheiro de Software Sênior especializado em sistemas distribuídos e pagamentos (Java/Kotlin). Autor do aegis4j, lib de agentes de IA para a JVM.">
+    <meta name="theme-color" content="#0f1420">
+    <meta property="og:title" content="André Lucas — Engenheiro de Software">
+    <meta property="og:description" content="Sistemas distribuídos & pagamentos. Java/Kotlin. Autor do aegis4j.">
+    <meta property="og:image" content="https://avatars2.githubusercontent.com/u/12537847?s=400&v=4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <script src="js/script.js"></script>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <title>André Lucas</title>
+    <title>André Lucas — Engenheiro de Software</title>
 </head>
 <body>
-    
-    <!-- Sidebar -->
-    <nav>
-        <span id="icone">
-            <i class="fas fa-bars"></i>
-        </span>
-        <ul>
-            <li id="galaxy" onclick="linkTo('42')">
-                <div class="circle gray">
-                    <img src="https://avatars2.githubusercontent.com/u/12537847?s=400&v=4" alt="Foto do André Lucas">
-                </div> 
-                <h2>André Lucas</h2>
-                <h4>Engenheiro de Software Sênior</h3>
-            </li>
-            <li id="about" onclick="linkTo('aboutme')">
-                Sobre mim
-            </li>
-            <li id="experience" onclick="linkTo('experiences')">
-                Experiência
-            </li>
-            <li id="projects" onclick="linkTo('projects')">
-                Projetos
-            </li>
-            <li id="skill" onclick="linkTo('skills')">
-                Habilidades
-            </li>
-        </ul>
-        <footer class="footer">
-            <div class="footer-nav">
-                <a class="social" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/AndreLucasrss">
-                    <i class="fab fa-twitter fa-2x"></i>
-                </a>
-                <a class="social" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/andre.lucasrs/">
-                    <i class="fab fa-instagram fa-2x"></i>
-                </a>
-                <a class="social" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/andrelucasrs/">
-                    <i class="fab fa-linkedin fa-2x"></i>
-                </a>
-                <a class="social" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/AndreLucasrs">
-                    <i class="fab fa-github fa-2x"></i>
-                </a>
-            </div>
-        </footer>
-    </nav>
 
-    <!-- Main -->
-    <main>
-        <section id="42">
-            <div class="center2 typewriter">
-                <p id="p1">Oi, eu sou o André Lucas, Engenheiro de Software Sênior</p>
+    <header class="site-header">
+        <a class="brand" href="#top">André Lucas</a>
+        <nav class="site-nav" id="site-nav">
+            <a href="#sobre">Sobre</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#skills">Skills</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <div class="header-actions">
+            <button id="theme-toggle" aria-label="Alternar tema claro/escuro" type="button">
+                <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 4V2M12 22v-2M4 12H2m20 0h-2M5.6 5.6 4.2 4.2m15.6 1.4 1.4-1.4M5.6 18.4l-1.4 1.4m15.6-1.4 1.4 1.4M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </button>
+            <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" type="button">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <p class="eyebrow">Distrito Federal, Brasil</p>
+            <h1>André Lucas</h1>
+            <p class="hero-role">Engenheiro de Software Sênior — sistemas distribuídos &amp; pagamentos</p>
+            <p class="hero-lede">
+                Construo plataformas financeiras que precisam operar com segurança e consistência em escala real —
+                Pix, crédito, assinaturas recorrentes — usadas por milhões de pessoas nos maiores ecossistemas de
+                fintech do Brasil. Nas horas livres, mantenho o
+                <a href="https://github.com/AndreLucasrs/aegis4j"><code>aegis4j</code></a>, uma lib própria de
+                agentes de IA para a JVM.
+            </p>
+            <div class="hero-links">
+                <a class="btn btn-primary" href="mailto:andrelrs.v@gmail.com">Enviar e-mail</a>
+                <a class="btn" href="https://www.linkedin.com/in/andrelucasrs/" target="_blank" rel="noopener">LinkedIn</a>
+                <a class="btn" href="https://github.com/AndreLucasrs" target="_blank" rel="noopener">GitHub</a>
             </div>
         </section>
-        <section id="aboutme">
-            <h2 class="title">Sobre mim</h2>
-            <div class="center aling-aboutme">
-                <p>Meu nome é André Lucas, sou graduado em Análise e Desenvolvimento de Sistema pelo <a href="https://www.ifg.edu.br/formosa">Instituto Federal de Goiás - IFG</a> e fui Bicampeão da maratona do IFG, com a equipe FULLSTACK OVERKILL para saber mais sobre a maratona clique <a target="_blank" class ="text-black" href="https://danielsaad.com/maratona/competicoes-anteriores/">AQUI</a>.</p>
-                <br>
-                <p>Trabalho na área desde 2015 (estágio na TCU), atuando profissionalmente com desenvolvimento desde 2017. Sempre transitei entre backend (Java, Kotlin, Spring Boot) e frontend (de JQuery a React/Next.js), e passei por empresas como TQI/PagSeguro e PicPay antes do Mercado Livre.</p>
-                <p>Atualmente sou Engenheiro de Software Sênior no Mercado Livre, e mantenho projetos pessoais em Java/Kotlin explorando agentes de IA na JVM (veja a seção Projetos).</p>
-                <br>
-                <br>
-                <h2 class="title">Contato</h2>
-                <p class="text-center aling-aboutme-p">Você pode entrar em contato comigo através de qualquer uma das minhas redes sociais.</p>
-                <br>
-                <br>
-                <div class="flex space">
-                    <a class="social" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/AndreLucasrss">
-                        <i class="fab fa-twitter fa-2x"></i>
-                    </a>
-                    <a class="social" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.instagram.com/andre.lucasrs/">
-                        <i class="fab fa-instagram fa-2x"></i>
-                    </a>
-                    <a class="social" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/andrelucasrs/">
-                        <i class="fab fa-linkedin fa-2x"></i>
-                    </a>
-                    <a class="social" target="_blank" class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/AndreLucasrs">
-                        <i class="fab fa-github fa-2x"></i>
-                    </a>
+
+        <section id="sobre" class="section">
+            <h2 class="section-title"><span class="section-num">01</span> Sobre</h2>
+            <div class="prose">
+                <p>
+                    Trabalho com desenvolvimento desde 2015 — comecei estagiando no
+                    <abbr title="Tribunal de Contas da União">TCU</abbr>, passei por consultorias de governo
+                    (BNDES, CGU, Anatel, Sicoob, Sebrae) e, desde 2020, atuo direto em pagamentos: Pix na TQI/PagSeguro,
+                    crédito e débito automático no PicPay, e hoje sistemas de assinatura e catálogo de conteúdo no
+                    Mercado Livre.
+                </p>
+                <p>
+                    Sou formado em Análise e Desenvolvimento de Sistemas pelo
+                    <a href="https://www.ifg.edu.br/formosa" target="_blank" rel="noopener">Instituto Federal de Goiás (IFG)</a>,
+                    onde fui bicampeão da maratona de programação com a equipe Fullstack Overkill. Gosto de arquitetura
+                    orientada a eventos, resiliência em sistemas financeiros, e — mais recentemente — de integrar
+                    fluxos com Claude Code no dia a dia (documentação, skills reutilizáveis, validação ponta a ponta).
+                </p>
+            </div>
+        </section>
+
+        <section id="projetos" class="section">
+            <h2 class="section-title"><span class="section-num">02</span> Projetos</h2>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>aegis4j</h3>
+                    <p>
+                        Lib Java/Kotlin de harness para agentes de IA na JVM: guardrails, skills com progressive
+                        disclosure, RAG, cliente MCP e model routing — providers e mecanismos construídos do zero,
+                        sem depender de framework de IA de terceiro.
+                    </p>
+                    <ul class="tags">
+                        <li>Java</li><li>Kotlin</li><li>RAG</li><li>MCP</li>
+                    </ul>
+                    <a class="card-link" href="https://github.com/AndreLucasrs/aegis4j" target="_blank" rel="noopener">Ver no GitHub →</a>
+                </article>
+                <article class="project-card">
+                    <h3>Cronos</h3>
+                    <p>
+                        Vitrine funcional do aegis4j: um app real de gestão de cronograma que usa os 5 pilares da lib
+                        (guardrails, skills, RAG, routing, MCP) em fluxos naturais, testados de ponta a ponta.
+                    </p>
+                    <ul class="tags">
+                        <li>Java</li><li>Javalin</li><li>pgvector</li>
+                    </ul>
+                    <a class="card-link" href="https://github.com/AndreLucasrs/cronos" target="_blank" rel="noopener">Ver no GitHub →</a>
+                </article>
+                <article class="project-card">
+                    <h3>Shine Tecnologia</h3>
+                    <p>
+                        Site da minha marca pessoal de tecnologia — portfólio e blog técnico.
+                    </p>
+                    <ul class="tags">
+                        <li>Next.js</li><li>Tailwind</li>
+                    </ul>
+                    <a class="card-link" href="https://github.com/AndreLucasrs/shine-tecnologia" target="_blank" rel="noopener">Ver no GitHub →</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="experiencia" class="section">
+            <h2 class="section-title"><span class="section-num">03</span> Experiência</h2>
+            <ol class="job-list">
+                <li class="job">
+                    <div class="job-head">
+                        <h3>Mercado Livre</h3>
+                        <span class="job-dates">dez 2022 — atual</span>
+                    </div>
+                    <p class="job-role">Engenheiro de Software Sênior</p>
+                    <p class="job-desc">
+                        No Mercado Pago, atuei no motor de pagamentos recorrentes (Meli+, seguros), do design da
+                        solução ao monitoramento em produção. Desde fev/2025, no Mercado Play, desenvolvo
+                        microsserviços para o catálogo de conteúdos.
+                    </p>
+                    <ul class="tags">
+                        <li>Java</li><li>Spring</li><li>Kafka</li><li>DynamoDB</li><li>AWS</li><li>GCP</li><li>Kubernetes</li>
+                    </ul>
+                </li>
+                <li class="job">
+                    <div class="job-head">
+                        <h3>PicPay</h3>
+                        <span class="job-dates">ago 2021 — dez 2022</span>
+                    </div>
+                    <p class="job-role">Engenheiro de Software Sênior</p>
+                    <p class="job-desc">
+                        Comecei no time de empréstimos, ampliando a oferta após a aquisição do GuiaBolso e integrando
+                        parceiros. Liderei o desenvolvimento e lançamento do débito automático para empréstimos,
+                        sendo promovido a sênior no processo.
+                    </p>
+                    <ul class="tags">
+                        <li>Java</li><li>Spring</li><li>Kafka</li><li>MongoDB</li><li>AWS</li><li>Docker</li>
+                    </ul>
+                </li>
+                <li class="job">
+                    <div class="job-head">
+                        <h3>TQI | PagSeguro</h3>
+                        <span class="job-dates">set 2020 — ago 2021</span>
+                    </div>
+                    <p class="job-role">Engenheiro de Software</p>
+                    <p class="job-desc">
+                        Participei do desenvolvimento e lançamento do Pix, otimizando o tempo de resposta de
+                        integrações de transferência, e contribuí para uma nova versão de split de pagamento com
+                        foco em resiliência via arquitetura orientada a eventos.
+                    </p>
+                    <ul class="tags">
+                        <li>Java</li><li>Kotlin</li><li>Spring WebFlux</li><li>Kafka</li><li>PostgreSQL</li>
+                    </ul>
+                </li>
+                <li class="job">
+                    <div class="job-head">
+                        <h3>TIT Consultoria e Serviços</h3>
+                        <span class="job-dates">jul 2020 — ago 2020</span>
+                    </div>
+                    <p class="job-role">Desenvolvedor Java</p>
+                    <p class="job-desc">Desenvolvimento de features com testes unitários.</p>
+                    <ul class="tags">
+                        <li>Java</li><li>Spring Boot</li><li>Angular</li>
+                    </ul>
+                </li>
+                <li class="job">
+                    <div class="job-head">
+                        <h3>MergIT (projetos Sebrae)</h3>
+                        <span class="job-dates">set 2019 — jul 2020</span>
+                    </div>
+                    <p class="job-role">Desenvolvedor de Software</p>
+                    <p class="job-desc">
+                        Desenvolvimento full-stack do "EmConta" (comparador de preços de serviços para
+                        microempreendedores) e do "Cash Flow" (gestão de caixa para pequenos negócios).
+                    </p>
+                    <ul class="tags">
+                        <li>Java</li><li>Spring Boot</li><li>Angular</li><li>React</li>
+                    </ul>
+                </li>
+                <li class="job">
+                    <div class="job-head">
+                        <h3>Mirante Tecnologia (projeto Sicoob)</h3>
+                        <span class="job-dates">jun 2019 — set 2019</span>
+                    </div>
+                    <p class="job-role">Desenvolvedor Java</p>
+                    <p class="job-desc">Desenvolvimento de sistemas Java com Apache Flex e EJB, com testes de unidade.</p>
+                    <ul class="tags">
+                        <li>Java</li><li>EJB</li><li>Apache Flex</li>
+                    </ul>
+                </li>
+                <li class="job">
+                    <div class="job-head">
+                        <h3>Polisys Informática</h3>
+                        <span class="job-dates">jan 2019 — mai 2019</span>
+                    </div>
+                    <p class="job-role">Desenvolvedor Full Stack</p>
+                    <p class="job-desc">Sistema de gestão de reuniões para o BNDES.</p>
+                    <ul class="tags">
+                        <li>Java</li><li>EJB</li><li>Angular</li><li>TypeScript</li>
+                    </ul>
+                </li>
+                <li class="job">
+                    <div class="job-head">
+                        <h3>Polisys Informática</h3>
+                        <span class="job-dates">ago 2017 — dez 2018</span>
+                    </div>
+                    <p class="job-role">Estagiário de Desenvolvimento</p>
+                    <p class="job-desc">
+                        Portal de transparência para a CGU e sistema de gestão de contas associadas para a Anatel,
+                        com testes unitários e de integração.
+                    </p>
+                    <ul class="tags">
+                        <li>Java</li><li>EJB</li><li>jQuery</li><li>AngularJS</li><li>Selenium</li>
+                    </ul>
+                </li>
+                <li class="job">
+                    <div class="job-head">
+                        <h3>Tribunal de Contas da União</h3>
+                        <span class="job-dates">dez 2015 — ago 2017</span>
+                    </div>
+                    <p class="job-role">Estagiário de Desenvolvimento Web</p>
+                    <p class="job-desc">
+                        Desenvolvimento de aplicações com Oracle APEX, SQL e PL/SQL, modelagem de dados, documentação
+                        e suporte evolutivo.
+                    </p>
+                    <ul class="tags">
+                        <li>Oracle APEX</li><li>PL/SQL</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section-title"><span class="section-num">04</span> Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3>Linguagens</h3>
+                    <ul class="tags"><li>Java</li><li>Kotlin</li><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>SQL</li></ul>
                 </div>
-        </section>
-        <section id="experiences">
-            <h2 class="title">Experiência</h2>
-            <div>
-                <div class="timeline">
-                    <div class="container right">
-                        <div class="content">
-                            <p class="content-info">Mercado Livre</p>
-                            <p class="content-info">Engenheiro de Software Sênior (01/12/2022 - atualmente)</p>
-                            <p class="content-subinfo margin-top"><span class="bold">Principais atividades:</span> No Mercado Pago, atuei no motor de pagamentos recorrentes (Meli+, seguros), desde design de solução até entrega e monitoramento. Desde 02/2025, no Mercado Play, desenvolvo microsserviços para o catálogo de conteúdos. Integro fluxos com Claude Code no dia a dia (documentação, skills reutilizáveis, validação ponta a ponta).</p>
-                            <div class="flex margin-top">
-                                <div>
-                                    <p class="content-subinfo"><span class="bold">Database:</span> DynamoDB, MySQL, MongoDB</p>
-                                    <p class="content-subinfo"><span class="bold">Backend:</span> Java, Spring, Python, Node.js</p>
-                                    <p class="content-subinfo"><span class="bold">Test:</span> JUnit, Mockito, BDD</p>
-                                    <p class="content-subinfo"><span class="bold">Observability:</span> New Relic, Grafana, DataDog, Kibana</p>
-                                    <p class="content-subinfo"><span class="bold">Outros:</span> Kafka, Redis, AWS, GCP, Google Pub/Sub, Docker, Kubernetes, ElasticSearch</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container left">
-                        <div class="content">
-                            <p class="content-info">PicPay</p>
-                            <p class="content-info">Engenheiro de Software Sênior (01/08/2021 - 31/12/2022)</p>
-                            <p class="content-subinfo margin-top"><span class="bold">Principais atividades:</span> Comecei no time de empréstimos, ampliando a oferta após a aquisição do GuiaBolso e integrando parceiros. Liderei o desenvolvimento e lançamento do débito automático para empréstimos, sendo promovido a sênior no processo.</p>
-                            <div class="flex margin-top">
-                                <div>
-                                    <p class="content-subinfo"><span class="bold">Database:</span> MongoDB</p>
-                                    <p class="content-subinfo"><span class="bold">Backend:</span> Java, Spring</p>
-                                    <p class="content-subinfo"><span class="bold">Test:</span> JUnit, Mockito</p>
-                                    <p class="content-subinfo"><span class="bold">Outros:</span> Kafka, SQS, Redis, AWS, Docker, Kubernetes, New Relic</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container right">
-                        <div class="content">
-                            <p class="content-info">TQI | PagSeguro</p>
-                            <p class="content-info">Engenheiro de Software (01/09/2020 - 31/08/2021)</p>
-                            <p class="content-subinfo margin-top"><span class="bold">Principais atividades:</span> Participei do desenvolvimento e lançamento do Pix, otimizando o tempo de resposta de integrações de transferência, e contribuí para uma nova versão de split de pagamento com foco em resiliência via arquitetura orientada a eventos.</p>
-                            <div class="flex margin-top">
-                                <div>
-                                    <p class="content-subinfo"><span class="bold">Database:</span> PostgreSQL, DynamoDB, Oracle, MySQL</p>
-                                    <p class="content-subinfo"><span class="bold">Backend:</span> Java, Kotlin, Spring, Spring WebFlux</p>
-                                    <p class="content-subinfo"><span class="bold">Test:</span> JUnit, Mockito</p>
-                                    <p class="content-subinfo"><span class="bold">Outros:</span> Kafka, SQS, AWS, Docker, Jenkins, Splunk, New Relic</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container left">
-                        <div class="content">
-                            <p class="content-info">TIT Consultoria e Serviços</p>
-                            <p class="content-info">Desenvolvedor Java (17/07/2020 - 21/08/2020)</p>
-                            <p class="content-subinfo margin-top"><span class="bold">Principais atividades:</span> Desenvolvimento de features com teste unitários.</p>
-                            <div class="flex margin-top">
-                                <div>
-                                    <p class="content-subinfo"><span class="bold">Database:</span> SQLServer</p>
-                                    <p class="content-subinfo"><span class="bold">Backend:</span> Java, Spring Boot</p>
-                                    <p class="content-subinfo"><span class="bold">Test:</span> JUnit</p>
-                                    <p class="content-subinfo"><span class="bold">Frontend:</span> Angular, TypeScript, Bootstrap, HTML, CSS</p>
-                                </div>
-                            </div>    
-                        </div>
-                    </div>
-                    <div class="container right">
-                        <div class="content">
-                            <p class="content-info">MergIT | Sebrae</p>
-                            <p class="content-info">Software Developer (09/09/2019 - 03/07/2020)</p>
-                            <p class="content-subinfo margin-top"><span class="bold">Principais atividades:</span> Desenvolvimento de aplicações web com teste unitários.</p>
-                            <div class="flex margin-top">
-                                <div>
-                                    <span class="title-info">Projetos para o Sebrae</span>
-                                    <p class="content-subinfo"><span class="bold">Database:</span> SQLServer, PostgreSQL</p>
-                                    <p class="content-subinfo"><span class="bold">Backend:</span> Java, Spring Boot</p>
-                                    <p class="content-subinfo"><span class="bold">Test:</span> JUnit</p>
-                                    <p class="content-subinfo"><span class="bold">Frontend:</span> Angular, TypeScript, Bootstrap, HTML, CSS, React, Javascript, Material-UI, JSS</p>
-                                </div>
-                            </div>    
-                        </div>
-                    </div>
-                    <div class="container left">
-                        <div class="content">
-                            <p class="content-info">Mirante Tecnologia | Sicoob</p>
-                            <p class="content-info">Desenvolvedor Java (03/06/2019 - 06/09/2019)</p>
-                            <p class="content-subinfo margin-top"><span class="bold">Principais atividades:</span> Desenvolvimento de aplicações Java com EJB, Apache FLex e teste unitários.</p>
-                        </div>
-                    </div>
-                    <div class="container right">
-                        <div class="content">
-                            <p class="content-info">Polisys Informática</p>
-                            <p class="content-info">Full Stack Developer (02/01/2019 – 24/05/2019)</p>
-                            <p class="content-subinfo margin-top"><span class="bold">Principais atividades:</span> Desenvolvimento de aplicações web</p>
-                            <div class="flex margin-top">
-                            <div>
-                                <span class="title-info">Projeto para BNDES</span>
-                                <p class="content-subinfo"><span class="bold">Database:</span> SQLServer</p>
-                                <p class="content-subinfo"><span class="bold">Backend:</span>  Java, EJB, RESTful services</p>
-                                <p class="content-subinfo"><span class="bold">Frontend:</span> Angular, TypeScript, Bootstrap, HTML, CSS</p>
-                            </div>
-                        </div>    
-                        </div>
-                    </div>
-                    <div class="container left">
-                        <div class="content">
-                        <p class="content-info">Polisys Informática</p>
-                        <p class="content-info">Estagiário de desenvolvimento (07/08/2017 – 31/12/2018)</p>
-                        <p class="content-subinfo margin-top"><span class="bold">Principais atividades:</span> Desenvolvimento de aplicações web com teste unitários e teste de integração</p>
-                        <div class="flex margin-top">
-                            <div>
-                                <span class="title-info">Projeto para CGU</span>
-                                <p class="content-subinfo"><span class="bold">Database:</span> SQLServer</p>
-                                <p class="content-subinfo"><span class="bold">Backend:</span>  Java, EJB, RESTful services</p>
-                                <p class="content-subinfo"><span class="bold">Test:</span> JUnit, Selenium</p>
-                                <p class="content-subinfo"><span class="bold">Frontend:</span> JQuery, Javascript, Bootstrap, FreeMarker, HTML, CSS</p>
-                            </div>
-                            <div>
-                                <span class="title-info">Projeto para Anatel</span>
-                                <p class="content-subinfo"><span class="bold">Database:</span> SQLServer</p>
-                                <p class="content-subinfo"><span class="bold">Backend:</span> Java, Spring Boot</p>
-                                <p class="content-subinfo"><span class="bold">Test:</span> JUnit, Selenium</p>
-                                <p class="content-subinfo"><span class="bold">Frontend:</span> AngularJS 1X, AngularJS Material, HTML, CSS</p>
-                            </div>
-                        </div>    
-                        </div>
-                    </div>
-                    <div class="container right">
-                        <div class="content">
-                        <p class="content-info">TCU – Tribunal de Contas da União</p>
-                        <p class="content-info">Estagiário de desenvolvimento (07/12/2015 – 04/08/2017)</p>
-                        <p class="content-subinfo margin-top"><span class="bold">Principais atividades:</span> Desenvolvimento de aplicações web com a ferramenta ORACLE APEX, linguagem SQL e PL/SQL.</p>
-                        </div>
-                    </div>
+                <div class="skill-group">
+                    <h3>Backend</h3>
+                    <ul class="tags"><li>Spring Boot</li><li>Spring WebFlux</li><li>Node.js</li><li>Kafka</li><li>SQS</li><li>Google Pub/Sub</li></ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Frontend</h3>
+                    <ul class="tags"><li>React</li><li>Next.js</li><li>Angular</li></ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Dados &amp; infra</h3>
+                    <ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>DynamoDB</li><li>MongoDB</li><li>Redis</li><li>AWS</li><li>GCP</li><li>Docker</li><li>Kubernetes</li></ul>
+                </div>
+                <div class="skill-group">
+                    <h3>Observabilidade &amp; testes</h3>
+                    <ul class="tags"><li>New Relic</li><li>Grafana</li><li>DataDog</li><li>Kibana</li><li>JUnit</li><li>Mockito</li><li>Selenium</li></ul>
+                </div>
+                <div class="skill-group">
+                    <h3>IA aplicada</h3>
+                    <ul class="tags"><li>Claude Code</li><li>NotebookLM</li></ul>
                 </div>
             </div>
         </section>
-        <section id="projects">
-            <h2 class="title">Projetos</h2>
-            <div class="center aling-aboutme">
-                <p><span class="bold">aegis4j</span> — lib Java/Kotlin de harness para agentes de IA na JVM: guardrails, skills com progressive disclosure, RAG, cliente MCP e model routing, tudo construído do zero. <a target="_blank" href="https://github.com/AndreLucasrs/aegis4j">Ver no GitHub</a></p>
-                <br>
-                <p><span class="bold">Cronos</span> — vitrine funcional do aegis4j: gestão de cronograma que usa os 5 pilares da lib em fluxos reais, testados de ponta a ponta. <a target="_blank" href="https://github.com/AndreLucasrs/cronos">Ver no GitHub</a></p>
-                <br>
-                <p><span class="bold">Shine Tecnologia</span> — site da minha marca pessoal, Next.js + Tailwind. <a target="_blank" href="https://github.com/AndreLucasrs/shine-tecnologia">Ver no GitHub</a></p>
-            </div>
-        </section>
-        <section id="skills">
-            <h2 class="title">Habilidades</h2>
-            <div class="center aling-aboutme">
-                <p>Linguagens: Java, Kotlin, JavaScript, TypeScript, Python, SQL.</p>
-                <br>
-                <p>Backend: Spring Boot, Spring WebFlux, Node.js, RESTful services, arquitetura orientada a eventos (Kafka, SQS, Google Pub/Sub).</p>
-                <br>
-                <p>Frontend: React, Next.js, Angular, Bootstrap, Material-UI.</p>
-                <br>
-                <p>Dados e infra: PostgreSQL, MySQL, DynamoDB, MongoDB, Redis, AWS, GCP, Docker, Kubernetes.</p>
-                <br>
-                <p>Observabilidade e testes: New Relic, Grafana, DataDog, Kibana, Splunk, JUnit, Mockito, Selenium.</p>
-                <br>
-                <p>IA aplicada ao dia a dia: Claude Code (documentação, skills reutilizáveis, validação ponta a ponta).</p>
-                <br>
-                <p>Ferramentas: IntelliJ IDEA, VSCode, GitHub, GitLab.</p>
-                <br><br>
-                <p>E o que eu não sei, posso aprender.</p>
-            </div>
-        </section>
-        <footer>
-            <p>Feito por André Lucas</p>
-        </footer>
     </main>
+
+    <footer id="contato" class="site-footer">
+        <p class="footer-lede">Vamos conversar?</p>
+        <div class="footer-links">
+            <a href="mailto:andrelrs.v@gmail.com" aria-label="E-mail">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 6h18v12H3V6Zm0 0 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/andrelucasrs/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4.5 8.5h3v11h-3v-11Zm1.5-5a1.75 1.75 0 1 1 0 3.5 1.75 1.75 0 0 1 0-3.5ZM10.5 8.5h3v1.7c.6-1 1.8-1.9 3.4-1.9 3 0 3.6 2 3.6 4.6v6.6h-3v-5.9c0-1.4-.3-2.5-1.9-2.5s-2.1 1.2-2.1 2.5v5.9h-3v-11Z" fill="currentColor"/></svg>
+            </a>
+            <a href="https://github.com/AndreLucasrs" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.9.83.1-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 1.03-2.7-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.4.2 2.44.1 2.7.64.7 1.03 1.6 1.03 2.7 0 3.85-2.35 4.7-4.58 4.94.36.31.68.93.68 1.87v2.77c0 .26.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/></svg>
+            </a>
+        </div>
+        <p class="copyright">© 2026 André Lucas</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
