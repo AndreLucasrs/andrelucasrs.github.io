@@ -24,13 +24,16 @@
                     <img src="https://avatars2.githubusercontent.com/u/12537847?s=400&v=4" alt="Foto do André Lucas">
                 </div> 
                 <h2>André Lucas</h2>
-                <h4>Engenheiro de Software</h3>
+                <h4>Engenheiro de Software Sênior</h3>
             </li>
             <li id="about" onclick="linkTo('aboutme')">
                 Sobre mim
             </li>
             <li id="experience" onclick="linkTo('experiences')">
                 Experiência
+            </li>
+            <li id="projects" onclick="linkTo('projects')">
+                Projetos
             </li>
             <li id="skill" onclick="linkTo('skills')">
                 Habilidades
@@ -58,7 +61,7 @@
     <main>
         <section id="42">
             <div class="center2 typewriter">
-                <p id="p1">Oi, eu sou o André Lucas, Engenheiro de Software</p>
+                <p id="p1">Oi, eu sou o André Lucas, Engenheiro de Software Sênior</p>
             </div>
         </section>
         <section id="aboutme">
@@ -66,8 +69,8 @@
             <div class="center aling-aboutme">
                 <p>Meu nome é André Lucas, sou graduado em Análise e Desenvolvimento de Sistema pelo <a href="https://www.ifg.edu.br/formosa">Instituto Federal de Goiás - IFG</a> e fui Bicampeão da maratona do IFG, com a equipe FULLSTACK OVERKILL para saber mais sobre a maratona clique <a target="_blank" class ="text-black" href="https://danielsaad.com/maratona/competicoes-anteriores/">AQUI</a>.</p>
                 <br>
-                <p>Trabalho na área a mais de 4 anos, utilizando Java a quase 3 anos, geralmente trabalho com a stack de backend e frontend desde quando comecei a trabalhar com Java, as tecnologias no frontend que já usei nesse período, foram desde JQuery a React.</p>
-                <p>Atualmente trabalho como Engenheiro de Software, no backend utilizando Kotlin e Java.</p>
+                <p>Trabalho na área desde 2015 (estágio na TCU), atuando profissionalmente com desenvolvimento desde 2017. Sempre transitei entre backend (Java, Kotlin, Spring Boot) e frontend (de JQuery a React/Next.js), e passei por empresas como TQI/PagSeguro e PicPay antes do Mercado Livre.</p>
+                <p>Atualmente sou Engenheiro de Software Sênior no Mercado Livre, e mantenho projetos pessoais em Java/Kotlin explorando agentes de IA na JVM (veja a seção Projetos).</p>
                 <br>
                 <br>
                 <h2 class="title">Contato</h2>
@@ -95,8 +98,48 @@
                 <div class="timeline">
                     <div class="container right">
                         <div class="content">
+                            <p class="content-info">Mercado Livre</p>
+                            <p class="content-info">Engenheiro de Software Sênior (01/12/2022 - atualmente)</p>
+                            <p class="content-subinfo margin-top"><span class="bold">Principais atividades:</span> No Mercado Pago, atuei no motor de pagamentos recorrentes (Meli+, seguros), desde design de solução até entrega e monitoramento. Desde 02/2025, no Mercado Play, desenvolvo microsserviços para o catálogo de conteúdos. Integro fluxos com Claude Code no dia a dia (documentação, skills reutilizáveis, validação ponta a ponta).</p>
+                            <div class="flex margin-top">
+                                <div>
+                                    <p class="content-subinfo"><span class="bold">Database:</span> DynamoDB, MySQL, MongoDB</p>
+                                    <p class="content-subinfo"><span class="bold">Backend:</span> Java, Spring, Python, Node.js</p>
+                                    <p class="content-subinfo"><span class="bold">Test:</span> JUnit, Mockito, BDD</p>
+                                    <p class="content-subinfo"><span class="bold">Observability:</span> New Relic, Grafana, DataDog, Kibana</p>
+                                    <p class="content-subinfo"><span class="bold">Outros:</span> Kafka, Redis, AWS, GCP, Google Pub/Sub, Docker, Kubernetes, ElasticSearch</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <p class="content-info">PicPay</p>
+                            <p class="content-info">Engenheiro de Software Sênior (01/08/2021 - 31/12/2022)</p>
+                            <p class="content-subinfo margin-top"><span class="bold">Principais atividades:</span> Comecei no time de empréstimos, ampliando a oferta após a aquisição do GuiaBolso e integrando parceiros. Liderei o desenvolvimento e lançamento do débito automático para empréstimos, sendo promovido a sênior no processo.</p>
+                            <div class="flex margin-top">
+                                <div>
+                                    <p class="content-subinfo"><span class="bold">Database:</span> MongoDB</p>
+                                    <p class="content-subinfo"><span class="bold">Backend:</span> Java, Spring</p>
+                                    <p class="content-subinfo"><span class="bold">Test:</span> JUnit, Mockito</p>
+                                    <p class="content-subinfo"><span class="bold">Outros:</span> Kafka, SQS, Redis, AWS, Docker, Kubernetes, New Relic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
                             <p class="content-info">TQI | PagSeguro</p>
-                            <p class="content-info">Engenheiro de Software (01/09/2020 - atualmente)</p>
+                            <p class="content-info">Engenheiro de Software (01/09/2020 - 31/08/2021)</p>
+                            <p class="content-subinfo margin-top"><span class="bold">Principais atividades:</span> Participei do desenvolvimento e lançamento do Pix, otimizando o tempo de resposta de integrações de transferência, e contribuí para uma nova versão de split de pagamento com foco em resiliência via arquitetura orientada a eventos.</p>
+                            <div class="flex margin-top">
+                                <div>
+                                    <p class="content-subinfo"><span class="bold">Database:</span> PostgreSQL, DynamoDB, Oracle, MySQL</p>
+                                    <p class="content-subinfo"><span class="bold">Backend:</span> Java, Kotlin, Spring, Spring WebFlux</p>
+                                    <p class="content-subinfo"><span class="bold">Test:</span> JUnit, Mockito</p>
+                                    <p class="content-subinfo"><span class="bold">Outros:</span> Kafka, SQS, AWS, Docker, Jenkins, Splunk, New Relic</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="container left">
@@ -185,20 +228,32 @@
                 </div>
             </div>
         </section>
+        <section id="projects">
+            <h2 class="title">Projetos</h2>
+            <div class="center aling-aboutme">
+                <p><span class="bold">aegis4j</span> — lib Java/Kotlin de harness para agentes de IA na JVM: guardrails, skills com progressive disclosure, RAG, cliente MCP e model routing, tudo construído do zero. <a target="_blank" href="https://github.com/AndreLucasrs/aegis4j">Ver no GitHub</a></p>
+                <br>
+                <p><span class="bold">Cronos</span> — vitrine funcional do aegis4j: gestão de cronograma que usa os 5 pilares da lib em fluxos reais, testados de ponta a ponta. <a target="_blank" href="https://github.com/AndreLucasrs/cronos">Ver no GitHub</a></p>
+                <br>
+                <p><span class="bold">Shine Tecnologia</span> — site da minha marca pessoal, Next.js + Tailwind. <a target="_blank" href="https://github.com/AndreLucasrs/shine-tecnologia">Ver no GitHub</a></p>
+            </div>
+        </section>
         <section id="skills">
             <h2 class="title">Habilidades</h2>
             <div class="center aling-aboutme">
-                <p>Conhecimento nas linguagens de programação Java, Javascript, TypeScript.</p>
+                <p>Linguagens: Java, Kotlin, JavaScript, TypeScript, Python, SQL.</p>
                 <br>
-                <p>Conhecimento nos frameworks e libs, JQuery, AngularJS 1X, Angular, React, Bootstrap, AngularJS Material, Material-UI, Spring Boot, EJB.</p>
+                <p>Backend: Spring Boot, Spring WebFlux, Node.js, RESTful services, arquitetura orientada a eventos (Kafka, SQS, Google Pub/Sub).</p>
                 <br>
-                <p>Conhecimento em CSS, HTML, SQL, HQL, JPA, JAX-RS, REST, MVC, JUnit, Selenium.</p>
+                <p>Frontend: React, Next.js, Angular, Bootstrap, Material-UI.</p>
                 <br>
-                <p>Bancos que tenho conhecimento, PostgreSQL, SQLServer, ORACLE.</p>
+                <p>Dados e infra: PostgreSQL, MySQL, DynamoDB, MongoDB, Redis, AWS, GCP, Docker, Kubernetes.</p>
                 <br>
-                <p>Ferramentas utilizadas, IntelliJ IDEA, WebStorm, VSCode, Eclipse, GitHub, GitLab.</p>
+                <p>Observabilidade e testes: New Relic, Grafana, DataDog, Kibana, Splunk, JUnit, Mockito, Selenium.</p>
                 <br>
-                <p>Outros conhecimentos em metodologia ágil, integração contínua ...</p>
+                <p>IA aplicada ao dia a dia: Claude Code (documentação, skills reutilizáveis, validação ponta a ponta).</p>
+                <br>
+                <p>Ferramentas: IntelliJ IDEA, VSCode, GitHub, GitLab.</p>
                 <br><br>
                 <p>E o que eu não sei, posso aprender.</p>
             </div>
