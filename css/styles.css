@@ -505,7 +505,7 @@ main, .site-footer {
     position: fixed;
     right: 20px;
     bottom: 16px;
-    width: 108px;
+    width: 118px;
     opacity: 0.5;
     pointer-events: none;
     z-index: 1;
@@ -531,11 +531,13 @@ main, .site-footer {
 }
 
 .sd-line {
+    fill: none;
     stroke: var(--border);
     stroke-width: 2;
 }
 
 .sd-flow {
+    fill: none;
     stroke: var(--accent);
     stroke-width: 2;
     stroke-dasharray: 5 9;

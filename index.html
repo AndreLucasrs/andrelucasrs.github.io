@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css?v=3">
+    <link rel="stylesheet" href="css/styles.css?v=4">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>André Lucas — Engenheiro de Software</title>
@@ -298,38 +298,50 @@
     </footer>
 
     <div class="system-diagram" aria-hidden="true">
-        <svg viewBox="0 0 160 192" width="140" height="168">
-            <line class="sd-line" x1="80" y1="32" x2="80" y2="54"></line>
-            <line class="sd-line" x1="80" y1="80" x2="40" y2="102"></line>
-            <line class="sd-line" x1="80" y1="80" x2="120" y2="102"></line>
-            <line class="sd-line" x1="40" y1="128" x2="40" y2="150"></line>
-            <line class="sd-line" x1="74" y1="163" x2="118" y2="128"></line>
+        <svg viewBox="-20 0 200 220" width="160" height="176">
+            <line class="sd-line" x1="90" y1="30" x2="90" y2="54"></line>
+            <line class="sd-line" x1="90" y1="78" x2="42" y2="90"></line>
+            <line class="sd-line" x1="90" y1="78" x2="138" y2="90"></line>
+            <line class="sd-line" x1="42" y1="114" x2="42" y2="138"></line>
+            <line class="sd-line" x1="76" y1="150" x2="104" y2="150"></line>
+            <line class="sd-line" x1="42" y1="162" x2="42" y2="186"></line>
+            <polyline class="sd-line" points="8,198 -12,198 -12,66 42,66"></polyline>
 
-            <line class="sd-flow" x1="80" y1="32" x2="80" y2="54"></line>
-            <line class="sd-flow" x1="80" y1="80" x2="40" y2="102"></line>
-            <line class="sd-flow" x1="80" y1="80" x2="120" y2="102"></line>
-            <line class="sd-flow" x1="40" y1="128" x2="40" y2="150"></line>
-            <line class="sd-flow" x1="74" y1="163" x2="118" y2="128"></line>
+            <line class="sd-flow" x1="90" y1="30" x2="90" y2="54"></line>
+            <line class="sd-flow" x1="90" y1="78" x2="42" y2="90"></line>
+            <line class="sd-flow" x1="90" y1="78" x2="138" y2="90"></line>
+            <line class="sd-flow" x1="42" y1="114" x2="42" y2="138"></line>
+            <line class="sd-flow" x1="76" y1="150" x2="104" y2="150"></line>
+            <line class="sd-flow" x1="42" y1="162" x2="42" y2="186"></line>
+            <polyline class="sd-flow" points="8,198 -12,198 -12,66 42,66"></polyline>
 
             <g class="sd-node">
-                <rect x="32" y="6" width="96" height="26" rx="6"></rect>
-                <text x="80" y="23">client</text>
+                <rect x="42" y="6" width="96" height="24" rx="6"></rect>
+                <text x="90" y="22">client</text>
             </g>
             <g class="sd-node">
-                <rect x="32" y="54" width="96" height="26" rx="6"></rect>
-                <text x="80" y="71">api</text>
+                <rect x="42" y="54" width="96" height="24" rx="6"></rect>
+                <text x="90" y="70">api</text>
             </g>
             <g class="sd-node">
-                <rect x="6" y="102" width="68" height="26" rx="6"></rect>
-                <text x="40" y="119">queue</text>
+                <rect x="8" y="90" width="68" height="24" rx="6"></rect>
+                <text x="42" y="106">queue</text>
             </g>
             <g class="sd-node">
-                <rect x="86" y="102" width="68" height="26" rx="6"></rect>
-                <text x="120" y="119">db</text>
+                <rect x="104" y="90" width="68" height="24" rx="6"></rect>
+                <text x="138" y="106">db</text>
             </g>
             <g class="sd-node">
-                <rect x="6" y="150" width="68" height="26" rx="6"></rect>
-                <text x="40" y="167">api</text>
+                <rect x="8" y="138" width="68" height="24" rx="6"></rect>
+                <text x="42" y="154">worker</text>
+            </g>
+            <g class="sd-node">
+                <rect x="104" y="138" width="68" height="24" rx="6"></rect>
+                <text x="138" y="154">db</text>
+            </g>
+            <g class="sd-node">
+                <rect x="8" y="186" width="68" height="24" rx="6"></rect>
+                <text x="42" y="202">topic</text>
             </g>
         </svg>
     </div>
@@ -348,6 +360,6 @@
         </div>
     </div>
 
-    <script src="js/script.js?v=3"></script>
+    <script src="js/script.js?v=4"></script>
 </body>
 </html>
