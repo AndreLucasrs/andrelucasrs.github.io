@@ -33,6 +33,9 @@
                 <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 4V2M12 22v-2M4 12H2m20 0h-2M5.6 5.6 4.2 4.2m15.6 1.4 1.4-1.4M5.6 18.4l-1.4 1.4m15.6-1.4 1.4 1.4M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
                 <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
             </button>
+            <button id="console-trigger" aria-label="Abrir console" title="Console (ou pressione `)" type="button">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m4 6 5 6-5 6M13 18h7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
             <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" type="button">
                 <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             </button>
@@ -81,7 +84,7 @@
         <section id="projetos" class="section">
             <h2 class="section-title"><span class="section-num">02</span> Projetos</h2>
             <div class="project-grid">
-                <article class="project-card">
+                <article class="project-card reveal">
                     <h3>aegis4j</h3>
                     <p>
                         Lib Java/Kotlin de harness para agentes de IA na JVM: guardrails, skills com progressive
@@ -93,7 +96,7 @@
                     </ul>
                     <a class="card-link" href="https://github.com/AndreLucasrs/aegis4j" target="_blank" rel="noopener">Ver no GitHub →</a>
                 </article>
-                <article class="project-card">
+                <article class="project-card reveal">
                     <h3>Cronos</h3>
                     <p>
                         Vitrine funcional do aegis4j: um app real de gestão de cronograma que usa os 5 pilares da lib
@@ -104,7 +107,7 @@
                     </ul>
                     <a class="card-link" href="https://github.com/AndreLucasrs/cronos" target="_blank" rel="noopener">Ver no GitHub →</a>
                 </article>
-                <article class="project-card">
+                <article class="project-card reveal">
                     <h3>Shine Tecnologia</h3>
                     <p>
                         Site da minha marca pessoal de tecnologia — portfólio e blog técnico.
@@ -119,8 +122,11 @@
 
         <section id="experiencia" class="section">
             <h2 class="section-title"><span class="section-num">03</span> Experiência</h2>
+            <div class="timeline-wrap">
+            <div class="timeline-track"></div>
+            <div class="timeline-fill" id="timeline-fill"></div>
             <ol class="job-list">
-                <li class="job">
+                <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>Mercado Livre</h3>
                         <span class="job-dates">dez 2022 — atual</span>
@@ -134,8 +140,8 @@
                     <ul class="tags">
                         <li>Java</li><li>Spring</li><li>Kafka</li><li>DynamoDB</li><li>AWS</li><li>GCP</li><li>Kubernetes</li>
                     </ul>
-                </li>
-                <li class="job">
+                </div></li>
+                <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>PicPay</h3>
                         <span class="job-dates">ago 2021 — dez 2022</span>
@@ -149,8 +155,8 @@
                     <ul class="tags">
                         <li>Java</li><li>Spring</li><li>Kafka</li><li>MongoDB</li><li>AWS</li><li>Docker</li>
                     </ul>
-                </li>
-                <li class="job">
+                </div></li>
+                <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>TQI | PagSeguro</h3>
                         <span class="job-dates">set 2020 — ago 2021</span>
@@ -164,8 +170,8 @@
                     <ul class="tags">
                         <li>Java</li><li>Kotlin</li><li>Spring WebFlux</li><li>Kafka</li><li>PostgreSQL</li>
                     </ul>
-                </li>
-                <li class="job">
+                </div></li>
+                <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>TIT Consultoria e Serviços</h3>
                         <span class="job-dates">jul 2020 — ago 2020</span>
@@ -175,8 +181,8 @@
                     <ul class="tags">
                         <li>Java</li><li>Spring Boot</li><li>Angular</li>
                     </ul>
-                </li>
-                <li class="job">
+                </div></li>
+                <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>MergIT (projetos Sebrae)</h3>
                         <span class="job-dates">set 2019 — jul 2020</span>
@@ -189,8 +195,8 @@
                     <ul class="tags">
                         <li>Java</li><li>Spring Boot</li><li>Angular</li><li>React</li>
                     </ul>
-                </li>
-                <li class="job">
+                </div></li>
+                <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>Mirante Tecnologia (projeto Sicoob)</h3>
                         <span class="job-dates">jun 2019 — set 2019</span>
@@ -200,8 +206,8 @@
                     <ul class="tags">
                         <li>Java</li><li>EJB</li><li>Apache Flex</li>
                     </ul>
-                </li>
-                <li class="job">
+                </div></li>
+                <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>Polisys Informática</h3>
                         <span class="job-dates">jan 2019 — mai 2019</span>
@@ -211,8 +217,8 @@
                     <ul class="tags">
                         <li>Java</li><li>EJB</li><li>Angular</li><li>TypeScript</li>
                     </ul>
-                </li>
-                <li class="job">
+                </div></li>
+                <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>Polisys Informática</h3>
                         <span class="job-dates">ago 2017 — dez 2018</span>
@@ -225,8 +231,8 @@
                     <ul class="tags">
                         <li>Java</li><li>EJB</li><li>jQuery</li><li>AngularJS</li><li>Selenium</li>
                     </ul>
-                </li>
-                <li class="job">
+                </div></li>
+                <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>Tribunal de Contas da União</h3>
                         <span class="job-dates">dez 2015 — ago 2017</span>
@@ -239,34 +245,35 @@
                     <ul class="tags">
                         <li>Oracle APEX</li><li>PL/SQL</li>
                     </ul>
-                </li>
+                </div></li>
             </ol>
+            </div>
         </section>
 
         <section id="skills" class="section">
             <h2 class="section-title"><span class="section-num">04</span> Skills</h2>
             <div class="skills-grid">
-                <div class="skill-group">
+                <div class="skill-group reveal">
                     <h3>Linguagens</h3>
                     <ul class="tags"><li>Java</li><li>Kotlin</li><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>SQL</li></ul>
                 </div>
-                <div class="skill-group">
+                <div class="skill-group reveal">
                     <h3>Backend</h3>
                     <ul class="tags"><li>Spring Boot</li><li>Spring WebFlux</li><li>Node.js</li><li>Kafka</li><li>SQS</li><li>Google Pub/Sub</li></ul>
                 </div>
-                <div class="skill-group">
+                <div class="skill-group reveal">
                     <h3>Frontend</h3>
                     <ul class="tags"><li>React</li><li>Next.js</li><li>Angular</li></ul>
                 </div>
-                <div class="skill-group">
+                <div class="skill-group reveal">
                     <h3>Dados &amp; infra</h3>
                     <ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>DynamoDB</li><li>MongoDB</li><li>Redis</li><li>AWS</li><li>GCP</li><li>Docker</li><li>Kubernetes</li></ul>
                 </div>
-                <div class="skill-group">
+                <div class="skill-group reveal">
                     <h3>Observabilidade &amp; testes</h3>
                     <ul class="tags"><li>New Relic</li><li>Grafana</li><li>DataDog</li><li>Kibana</li><li>JUnit</li><li>Mockito</li><li>Selenium</li></ul>
                 </div>
-                <div class="skill-group">
+                <div class="skill-group reveal">
                     <h3>IA aplicada</h3>
                     <ul class="tags"><li>Claude Code</li><li>NotebookLM</li></ul>
                 </div>
@@ -289,6 +296,20 @@
         </div>
         <p class="copyright">© 2026 André Lucas</p>
     </footer>
+
+    <div id="console" class="console-overlay" hidden>
+        <div class="console-window" role="dialog" aria-label="Console">
+            <div class="console-titlebar">
+                <span>andre@portfolio:~$</span>
+                <button id="console-close" aria-label="Fechar console" type="button">&times;</button>
+            </div>
+            <div class="console-output" id="console-output"></div>
+            <div class="console-input-line">
+                <span class="console-prompt">&gt;</span>
+                <input id="console-input" type="text" autocomplete="off" spellcheck="false" aria-label="Comando do console">
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
