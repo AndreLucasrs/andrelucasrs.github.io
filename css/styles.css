@@ -499,6 +499,57 @@ main, .site-footer {
     margin: 0;
 }
 
+/* System diagram (decorative) ------------------------------------------------ */
+
+.system-diagram {
+    position: fixed;
+    right: 20px;
+    bottom: 16px;
+    width: 84px;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.system-diagram svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.sd-node rect {
+    fill: var(--surface);
+    stroke: var(--border);
+    stroke-width: 1.5;
+}
+
+.sd-node text {
+    fill: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-anchor: middle;
+}
+
+.sd-line {
+    stroke: var(--border);
+    stroke-width: 2;
+}
+
+.sd-flow {
+    stroke: var(--accent);
+    stroke-width: 2;
+    stroke-dasharray: 5 9;
+    animation: sd-flow 2.4s linear infinite;
+}
+
+@keyframes sd-flow {
+    to { stroke-dashoffset: -28; }
+}
+
+@media (max-width: 900px) {
+    .system-diagram { display: none; }
+}
+
 /* Console easter egg --------------------------------------------------------- */
 
 .console-overlay {

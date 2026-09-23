@@ -297,6 +297,33 @@
         <p class="copyright">© 2026 André Lucas</p>
     </footer>
 
+    <div class="system-diagram" aria-hidden="true">
+        <svg viewBox="0 0 140 200" width="140" height="200">
+            <line class="sd-line" x1="70" y1="38" x2="70" y2="62"></line>
+            <line class="sd-line" x1="70" y1="90" x2="70" y2="114"></line>
+            <line class="sd-line" x1="70" y1="142" x2="70" y2="166"></line>
+            <line class="sd-flow" x1="70" y1="38" x2="70" y2="62"></line>
+            <line class="sd-flow" x1="70" y1="90" x2="70" y2="114"></line>
+            <line class="sd-flow" x1="70" y1="142" x2="70" y2="166"></line>
+            <g class="sd-node">
+                <rect x="20" y="10" width="100" height="28" rx="6"></rect>
+                <text x="70" y="28">client</text>
+            </g>
+            <g class="sd-node">
+                <rect x="20" y="62" width="100" height="28" rx="6"></rect>
+                <text x="70" y="80">api</text>
+            </g>
+            <g class="sd-node">
+                <rect x="20" y="114" width="100" height="28" rx="6"></rect>
+                <text x="70" y="132">queue</text>
+            </g>
+            <g class="sd-node">
+                <rect x="20" y="166" width="100" height="28" rx="6"></rect>
+                <text x="70" y="184">db</text>
+            </g>
+        </svg>
+    </div>
+
     <div id="console" class="console-overlay" hidden>
         <div class="console-window" role="dialog" aria-label="Console">
             <div class="console-titlebar">
