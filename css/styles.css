@@ -160,6 +160,17 @@ abbr {
     :root:not([data-theme="light"]) .icon-moon { display: block; }
 }
 
+#lang-toggle span {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.lang-target-pt { display: none; }
+:root[lang="en"] .lang-target-en { display: none; }
+:root[lang="en"] .lang-target-pt { display: block; }
+
 #nav-toggle { display: none; }
 
 /* Layout ---------------------------------------------------------------- */

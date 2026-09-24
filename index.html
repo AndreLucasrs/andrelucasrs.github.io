@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css?v=4">
+    <link rel="stylesheet" href="css/styles.css?v=5">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>André Lucas — Engenheiro de Software</title>
@@ -22,21 +22,25 @@
     <header class="site-header">
         <a class="brand" href="#top">André Lucas</a>
         <nav class="site-nav" id="site-nav">
-            <a href="#sobre">Sobre</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#experiencia">Experiência</a>
-            <a href="#skills">Skills</a>
-            <a href="#contato">Contato</a>
+            <a href="#sobre" data-i18n="nav.sobre">Sobre</a>
+            <a href="#projetos" data-i18n="nav.projetos">Projetos</a>
+            <a href="#experiencia" data-i18n="nav.experiencia">Experiência</a>
+            <a href="#skills" data-i18n="nav.skills">Skills</a>
+            <a href="#contato" data-i18n="nav.contato">Contato</a>
         </nav>
         <div class="header-actions">
-            <button id="theme-toggle" aria-label="Alternar tema claro/escuro" type="button">
+            <button id="lang-toggle" aria-label="Alternar idioma (PT/EN)" data-i18n-aria="aria.langToggle" type="button">
+                <span class="lang-target-en">EN</span>
+                <span class="lang-target-pt">PT</span>
+            </button>
+            <button id="theme-toggle" aria-label="Alternar tema claro/escuro" data-i18n-aria="aria.themeToggle" type="button">
                 <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 4V2M12 22v-2M4 12H2m20 0h-2M5.6 5.6 4.2 4.2m15.6 1.4 1.4-1.4M5.6 18.4l-1.4 1.4m15.6-1.4 1.4 1.4M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
                 <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
             </button>
-            <button id="console-trigger" aria-label="Abrir console" title="Console (ou pressione `)" type="button">
+            <button id="console-trigger" aria-label="Abrir console" title="Console (ou pressione `)" data-i18n-aria="aria.consoleTrigger" data-i18n-title="aria.consoleTitle" type="button">
                 <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m4 6 5 6-5 6M13 18h7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
-            <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" type="button">
+            <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" data-i18n-aria="aria.navToggle" type="button">
                 <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             </button>
         </div>
@@ -44,10 +48,10 @@
 
     <main id="top">
         <section class="hero">
-            <p class="eyebrow">Distrito Federal, Brasil</p>
+            <p class="eyebrow" data-i18n="hero.eyebrow">Distrito Federal, Brasil</p>
             <h1>André Lucas</h1>
-            <p class="hero-role">Engenheiro de Software Sênior — sistemas distribuídos &amp; pagamentos</p>
-            <p class="hero-lede">
+            <p class="hero-role" data-i18n="hero.role">Engenheiro de Software Sênior — sistemas distribuídos &amp; pagamentos</p>
+            <p class="hero-lede" data-i18n-html="hero.lede">
                 Construo plataformas financeiras que precisam operar com segurança e consistência em escala real —
                 Pix, crédito, assinaturas recorrentes — usadas por milhões de pessoas nos maiores ecossistemas de
                 fintech do Brasil. Nas horas livres, mantenho o
@@ -55,23 +59,23 @@
                 agentes de IA para a JVM.
             </p>
             <div class="hero-links">
-                <a class="btn btn-primary" href="mailto:andrelrs.v@gmail.com">Enviar e-mail</a>
+                <a class="btn btn-primary" href="mailto:andrelrs.v@gmail.com" data-i18n="hero.emailBtn">Enviar e-mail</a>
                 <a class="btn" href="https://www.linkedin.com/in/andrelucasrs/" target="_blank" rel="noopener">LinkedIn</a>
                 <a class="btn" href="https://github.com/AndreLucasrs" target="_blank" rel="noopener">GitHub</a>
             </div>
         </section>
 
         <section id="sobre" class="section">
-            <h2 class="section-title"><span class="section-num">01</span> Sobre</h2>
+            <h2 class="section-title"><span class="section-num">01</span> <span data-i18n="sobre.title">Sobre</span></h2>
             <div class="prose">
-                <p>
+                <p data-i18n-html="sobre.p1">
                     Trabalho com desenvolvimento desde 2015 — comecei estagiando no
                     <abbr title="Tribunal de Contas da União">TCU</abbr>, passei por consultorias de governo
                     (BNDES, CGU, Anatel, Sicoob, Sebrae) e, desde 2020, atuo direto em pagamentos: Pix na TQI/PagSeguro,
                     crédito e débito automático no PicPay, e hoje sistemas de assinatura e catálogo de conteúdo no
                     Mercado Livre.
                 </p>
-                <p>
+                <p data-i18n-html="sobre.p2">
                     Sou formado em Análise e Desenvolvimento de Sistemas pelo
                     <a href="https://www.ifg.edu.br/formosa" target="_blank" rel="noopener">Instituto Federal de Goiás (IFG)</a>,
                     onde fui bicampeão da maratona de programação com a equipe Fullstack Overkill. Gosto de arquitetura
@@ -82,11 +86,11 @@
         </section>
 
         <section id="projetos" class="section">
-            <h2 class="section-title"><span class="section-num">02</span> Projetos</h2>
+            <h2 class="section-title"><span class="section-num">02</span> <span data-i18n="projetos.title">Projetos</span></h2>
             <div class="project-grid">
                 <article class="project-card reveal">
                     <h3>aegis4j</h3>
-                    <p>
+                    <p data-i18n-html="proj.aegis4j.desc">
                         Lib Java/Kotlin de harness para agentes de IA na JVM: guardrails, skills com progressive
                         disclosure, RAG, cliente MCP e model routing — providers e mecanismos construídos do zero,
                         sem depender de framework de IA de terceiro.
@@ -94,34 +98,34 @@
                     <ul class="tags">
                         <li>Java</li><li>Kotlin</li><li>RAG</li><li>MCP</li>
                     </ul>
-                    <a class="card-link" href="https://github.com/AndreLucasrs/aegis4j" target="_blank" rel="noopener">Ver no GitHub →</a>
+                    <a class="card-link" href="https://github.com/AndreLucasrs/aegis4j" target="_blank" rel="noopener" data-i18n="proj.viewGithub">Ver no GitHub →</a>
                 </article>
                 <article class="project-card reveal">
                     <h3>Cronos</h3>
-                    <p>
+                    <p data-i18n-html="proj.cronos.desc">
                         Vitrine funcional do aegis4j: um app real de gestão de cronograma que usa os 5 pilares da lib
                         (guardrails, skills, RAG, routing, MCP) em fluxos naturais, testados de ponta a ponta.
                     </p>
                     <ul class="tags">
                         <li>Java</li><li>Javalin</li><li>pgvector</li>
                     </ul>
-                    <a class="card-link" href="https://github.com/AndreLucasrs/cronos" target="_blank" rel="noopener">Ver no GitHub →</a>
+                    <a class="card-link" href="https://github.com/AndreLucasrs/cronos" target="_blank" rel="noopener" data-i18n="proj.viewGithub">Ver no GitHub →</a>
                 </article>
                 <article class="project-card reveal">
                     <h3>Shine Tecnologia</h3>
-                    <p>
+                    <p data-i18n-html="proj.shine.desc">
                         Site da minha marca pessoal de tecnologia — portfólio e blog técnico.
                     </p>
                     <ul class="tags">
                         <li>Next.js</li><li>Tailwind</li>
                     </ul>
-                    <a class="card-link" href="https://github.com/AndreLucasrs/shine-tecnologia" target="_blank" rel="noopener">Ver no GitHub →</a>
+                    <a class="card-link" href="https://github.com/AndreLucasrs/shine-tecnologia" target="_blank" rel="noopener" data-i18n="proj.viewGithub">Ver no GitHub →</a>
                 </article>
             </div>
         </section>
 
         <section id="experiencia" class="section">
-            <h2 class="section-title"><span class="section-num">03</span> Experiência</h2>
+            <h2 class="section-title"><span class="section-num">03</span> <span data-i18n="experiencia.title">Experiência</span></h2>
             <div class="timeline-wrap">
             <div class="timeline-track"></div>
             <div class="timeline-fill" id="timeline-fill"></div>
@@ -129,10 +133,10 @@
                 <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>Mercado Livre</h3>
-                        <span class="job-dates">dez 2022 — atual</span>
+                        <span class="job-dates" data-i18n="exp.meli.dates">dez 2022 — atual</span>
                     </div>
-                    <p class="job-role">Engenheiro de Software Sênior</p>
-                    <p class="job-desc">
+                    <p class="job-role" data-i18n="exp.meli.role">Engenheiro de Software Sênior</p>
+                    <p class="job-desc" data-i18n-html="exp.meli.desc">
                         No Mercado Pago, atuei no motor de pagamentos recorrentes (Meli+, seguros), do design da
                         solução ao monitoramento em produção. Desde fev/2025, no Mercado Play, desenvolvo
                         microsserviços para o catálogo de conteúdos.
@@ -144,10 +148,10 @@
                 <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>PicPay</h3>
-                        <span class="job-dates">ago 2021 — dez 2022</span>
+                        <span class="job-dates" data-i18n="exp.picpay.dates">ago 2021 — dez 2022</span>
                     </div>
-                    <p class="job-role">Engenheiro de Software Sênior</p>
-                    <p class="job-desc">
+                    <p class="job-role" data-i18n="exp.picpay.role">Engenheiro de Software Sênior</p>
+                    <p class="job-desc" data-i18n-html="exp.picpay.desc">
                         Comecei no time de empréstimos, ampliando a oferta após a aquisição do GuiaBolso e integrando
                         parceiros. Liderei o desenvolvimento e lançamento do débito automático para empréstimos,
                         sendo promovido a sênior no processo.
@@ -159,10 +163,10 @@
                 <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>TQI | PagSeguro</h3>
-                        <span class="job-dates">set 2020 — ago 2021</span>
+                        <span class="job-dates" data-i18n="exp.tqi.dates">set 2020 — ago 2021</span>
                     </div>
-                    <p class="job-role">Engenheiro de Software</p>
-                    <p class="job-desc">
+                    <p class="job-role" data-i18n="exp.tqi.role">Engenheiro de Software</p>
+                    <p class="job-desc" data-i18n-html="exp.tqi.desc">
                         Participei do desenvolvimento e lançamento do Pix, otimizando o tempo de resposta de
                         integrações de transferência, e contribuí para uma nova versão de split de pagamento com
                         foco em resiliência via arquitetura orientada a eventos.
@@ -174,10 +178,10 @@
                 <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>TIT Consultoria e Serviços</h3>
-                        <span class="job-dates">jul 2020 — ago 2020</span>
+                        <span class="job-dates" data-i18n="exp.tit.dates">jul 2020 — ago 2020</span>
                     </div>
-                    <p class="job-role">Desenvolvedor Java</p>
-                    <p class="job-desc">Desenvolvimento de features com testes unitários.</p>
+                    <p class="job-role" data-i18n="exp.tit.role">Desenvolvedor Java</p>
+                    <p class="job-desc" data-i18n="exp.tit.desc">Desenvolvimento de features com testes unitários.</p>
                     <ul class="tags">
                         <li>Java</li><li>Spring Boot</li><li>Angular</li>
                     </ul>
@@ -185,10 +189,10 @@
                 <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>MergIT (projetos Sebrae)</h3>
-                        <span class="job-dates">set 2019 — jul 2020</span>
+                        <span class="job-dates" data-i18n="exp.mergit.dates">set 2019 — jul 2020</span>
                     </div>
-                    <p class="job-role">Desenvolvedor de Software</p>
-                    <p class="job-desc">
+                    <p class="job-role" data-i18n="exp.mergit.role">Desenvolvedor de Software</p>
+                    <p class="job-desc" data-i18n-html="exp.mergit.desc">
                         Desenvolvimento full-stack do "EmConta" (comparador de preços de serviços para
                         microempreendedores) e do "Cash Flow" (gestão de caixa para pequenos negócios).
                     </p>
@@ -199,10 +203,10 @@
                 <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>Mirante Tecnologia (projeto Sicoob)</h3>
-                        <span class="job-dates">jun 2019 — set 2019</span>
+                        <span class="job-dates" data-i18n="exp.mirante.dates">jun 2019 — set 2019</span>
                     </div>
-                    <p class="job-role">Desenvolvedor Java</p>
-                    <p class="job-desc">Desenvolvimento de sistemas Java com Apache Flex e EJB, com testes de unidade.</p>
+                    <p class="job-role" data-i18n="exp.mirante.role">Desenvolvedor Java</p>
+                    <p class="job-desc" data-i18n="exp.mirante.desc">Desenvolvimento de sistemas Java com Apache Flex e EJB, com testes de unidade.</p>
                     <ul class="tags">
                         <li>Java</li><li>EJB</li><li>Apache Flex</li>
                     </ul>
@@ -210,10 +214,10 @@
                 <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>Polisys Informática</h3>
-                        <span class="job-dates">jan 2019 — mai 2019</span>
+                        <span class="job-dates" data-i18n="exp.polisys2019.dates">jan 2019 — mai 2019</span>
                     </div>
-                    <p class="job-role">Desenvolvedor Full Stack</p>
-                    <p class="job-desc">Sistema de gestão de reuniões para o BNDES.</p>
+                    <p class="job-role" data-i18n="exp.polisys2019.role">Desenvolvedor Full Stack</p>
+                    <p class="job-desc" data-i18n="exp.polisys2019.desc">Sistema de gestão de reuniões para o BNDES.</p>
                     <ul class="tags">
                         <li>Java</li><li>EJB</li><li>Angular</li><li>TypeScript</li>
                     </ul>
@@ -221,10 +225,10 @@
                 <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>Polisys Informática</h3>
-                        <span class="job-dates">ago 2017 — dez 2018</span>
+                        <span class="job-dates" data-i18n="exp.polisys2017.dates">ago 2017 — dez 2018</span>
                     </div>
-                    <p class="job-role">Estagiário de Desenvolvimento</p>
-                    <p class="job-desc">
+                    <p class="job-role" data-i18n="exp.polisys2017.role">Estagiário de Desenvolvimento</p>
+                    <p class="job-desc" data-i18n-html="exp.polisys2017.desc">
                         Portal de transparência para a CGU e sistema de gestão de contas associadas para a Anatel,
                         com testes unitários e de integração.
                     </p>
@@ -235,10 +239,10 @@
                 <li class="job reveal"><div class="job-marker"></div><div class="job-body">
                     <div class="job-head">
                         <h3>Tribunal de Contas da União</h3>
-                        <span class="job-dates">dez 2015 — ago 2017</span>
+                        <span class="job-dates" data-i18n="exp.tcu.dates">dez 2015 — ago 2017</span>
                     </div>
-                    <p class="job-role">Estagiário de Desenvolvimento Web</p>
-                    <p class="job-desc">
+                    <p class="job-role" data-i18n="exp.tcu.role">Estagiário de Desenvolvimento Web</p>
+                    <p class="job-desc" data-i18n-html="exp.tcu.desc">
                         Desenvolvimento de aplicações com Oracle APEX, SQL e PL/SQL, modelagem de dados, documentação
                         e suporte evolutivo.
                     </p>
@@ -251,30 +255,30 @@
         </section>
 
         <section id="skills" class="section">
-            <h2 class="section-title"><span class="section-num">04</span> Skills</h2>
+            <h2 class="section-title"><span class="section-num">04</span> <span data-i18n="skills.title">Skills</span></h2>
             <div class="skills-grid">
                 <div class="skill-group reveal">
-                    <h3>Linguagens</h3>
+                    <h3 data-i18n="skills.languages">Linguagens</h3>
                     <ul class="tags"><li>Java</li><li>Kotlin</li><li>TypeScript</li><li>JavaScript</li><li>Python</li><li>SQL</li></ul>
                 </div>
                 <div class="skill-group reveal">
-                    <h3>Backend</h3>
+                    <h3 data-i18n="skills.backend">Backend</h3>
                     <ul class="tags"><li>Spring Boot</li><li>Spring WebFlux</li><li>Node.js</li><li>Kafka</li><li>SQS</li><li>Google Pub/Sub</li></ul>
                 </div>
                 <div class="skill-group reveal">
-                    <h3>Frontend</h3>
+                    <h3 data-i18n="skills.frontend">Frontend</h3>
                     <ul class="tags"><li>React</li><li>Next.js</li><li>Angular</li></ul>
                 </div>
                 <div class="skill-group reveal">
-                    <h3>Dados &amp; infra</h3>
+                    <h3 data-i18n="skills.data">Dados &amp; infra</h3>
                     <ul class="tags"><li>PostgreSQL</li><li>MySQL</li><li>DynamoDB</li><li>MongoDB</li><li>Redis</li><li>AWS</li><li>GCP</li><li>Docker</li><li>Kubernetes</li></ul>
                 </div>
                 <div class="skill-group reveal">
-                    <h3>Observabilidade &amp; testes</h3>
+                    <h3 data-i18n="skills.observability">Observabilidade &amp; testes</h3>
                     <ul class="tags"><li>New Relic</li><li>Grafana</li><li>DataDog</li><li>Kibana</li><li>JUnit</li><li>Mockito</li><li>Selenium</li></ul>
                 </div>
                 <div class="skill-group reveal">
-                    <h3>IA aplicada</h3>
+                    <h3 data-i18n="skills.ai">IA aplicada</h3>
                     <ul class="tags"><li>Claude Code</li><li>NotebookLM</li></ul>
                 </div>
             </div>
@@ -282,7 +286,7 @@
     </main>
 
     <footer id="contato" class="site-footer">
-        <p class="footer-lede">Vamos conversar?</p>
+        <p class="footer-lede" data-i18n="footer.lede">Vamos conversar?</p>
         <div class="footer-links">
             <a href="mailto:andrelrs.v@gmail.com" aria-label="E-mail">
                 <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 6h18v12H3V6Zm0 0 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
@@ -292,6 +296,9 @@
             </a>
             <a href="https://github.com/AndreLucasrs" target="_blank" rel="noopener" aria-label="GitHub">
                 <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.9.83.1-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-2 1.03-2.7-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.4.2 2.44.1 2.7.64.7 1.03 1.6 1.03 2.7 0 3.85-2.35 4.7-4.58 4.94.36.31.68.93.68 1.87v2.77c0 .26.18.58.69.48A10 10 0 0 0 12 2Z" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.shinetecnologia.com.br/" target="_blank" rel="noopener" aria-label="Shine Tecnologia" title="Site da Shine Tecnologia" data-i18n-title="footer.shineTitle">
+                <svg viewBox="0 0 100 100" width="20" height="20" aria-hidden="true"><path d="M50 4c1.25 17.5 5.83 29.58 13.75 37.08 7.92 7.5 20 11.25 36.25 11.67-17.08 1.25-28.75 5.83-36.25 13.75C56.25 76.25 51.67 88.75 50 93.75c-1.67-17.5-6.25-29.58-13.75-37.08-7.92-7.5-20-11.25-36.25-11.67 17.08-1.25 28.75-5.83 36.25-13.75C43.75 23.75 48.33 11.25 50 4z" fill="#ff8154"/></svg>
             </a>
         </div>
         <p class="copyright">© 2026 André Lucas</p>
@@ -360,6 +367,6 @@
         </div>
     </div>
 
-    <script src="js/script.js?v=4"></script>
+    <script src="js/script.js?v=5"></script>
 </body>
 </html>
