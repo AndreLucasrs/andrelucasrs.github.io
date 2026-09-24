@@ -83,7 +83,22 @@ var TRANSLATIONS = {
     'skills.ai': 'IA aplicada',
     'footer.lede': 'Vamos conversar?',
     'footer.shineTitle': 'Site da Shine Tecnologia',
-    'meta.title': 'André Lucas — Engenheiro de Software'
+    'meta.title': 'André Lucas — Engenheiro de Software',
+    'aria.consoleClose': 'Fechar console',
+    'aria.consoleInputLabel': 'Comando do console',
+    'console.intro': 'Digite "help" para ver os comandos disponíveis.',
+    'console.helpText': 'comandos: help, whoami, skills, projects, experience, contact, ls, theme, clear, exit',
+    'console.themeToggled': 'tema alternado.',
+    'console.notFoundPrefix': 'comando não encontrado: ',
+    'console.notFoundSuffix': ' (tente "help")',
+    'console.cmd.whoami': 'André Lucas — engenheiro de software sênior. Sistemas distribuídos & pagamentos, hoje no Mercado Livre.',
+    'console.cmd.skills': 'Java, Kotlin, TypeScript, Spring, Kafka, PostgreSQL, AWS/GCP, Kubernetes, RAG, MCP.',
+    'console.cmd.projects': 'aegis4j, Cronos, Shine Tecnologia — veja a seção "Projetos" acima.',
+    'console.cmd.experience': 'Mercado Livre → PicPay → TQI/PagSeguro → ... → TCU. Veja a seção "Experiência".',
+    'console.cmd.contact': 'andrelrs.v@gmail.com — ou LinkedIn/GitHub no rodapé.',
+    'console.cmd.sudo': 'Permissão negada. (relaxa, você não precisa de root nesse site)',
+    'console.cmd.ls': 'sobre  projetos  experiencia  skills  contato',
+    'console.cmd.pwd': '/home/andre/portfolio'
   },
   en: {
     'nav.sobre': 'About',
@@ -169,8 +184,27 @@ var TRANSLATIONS = {
     'skills.ai': 'Applied AI',
     'footer.lede': "Let's talk?",
     'footer.shineTitle': 'Shine Tecnologia website',
-    'meta.title': 'André Lucas — Software Engineer'
+    'meta.title': 'André Lucas — Software Engineer',
+    'aria.consoleClose': 'Close console',
+    'aria.consoleInputLabel': 'Console command',
+    'console.intro': 'Type "help" to see available commands.',
+    'console.helpText': 'commands: help, whoami, skills, projects, experience, contact, ls, theme, clear, exit',
+    'console.themeToggled': 'theme toggled.',
+    'console.notFoundPrefix': 'command not found: ',
+    'console.notFoundSuffix': ' (try "help")',
+    'console.cmd.whoami': 'André Lucas — senior software engineer. Distributed systems & payments, currently at Mercado Livre.',
+    'console.cmd.skills': 'Java, Kotlin, TypeScript, Spring, Kafka, PostgreSQL, AWS/GCP, Kubernetes, RAG, MCP.',
+    'console.cmd.projects': 'aegis4j, Cronos, Shine Tecnologia — see the "Projects" section above.',
+    'console.cmd.experience': 'Mercado Livre → PicPay → TQI/PagSeguro → ... → TCU. See the "Experience" section.',
+    'console.cmd.contact': 'andrelrs.v@gmail.com — or LinkedIn/GitHub in the footer.',
+    'console.cmd.sudo': "Permission denied. (relax, you don't need root on this site)",
+    'console.cmd.ls': 'about  projects  experience  skills  contact',
+    'console.cmd.pwd': '/home/andre/portfolio'
   }
+}
+
+function getCurrentLang () {
+  return document.documentElement.getAttribute('lang') === 'en' ? 'en' : 'pt'
 }
 
 function applyLanguage (lang) {
@@ -299,17 +333,6 @@ window.onload = function () {
   var consoleInput = document.getElementById('console-input')
 
   if (consolePanel && consoleOutput && consoleInput) {
-    var COMMANDS = {
-      whoami: 'André Lucas — engenheiro de software sênior. Sistemas distribuídos & pagamentos, hoje no Mercado Livre.',
-      skills: 'Java, Kotlin, TypeScript, Spring, Kafka, PostgreSQL, AWS/GCP, Kubernetes, RAG, MCP.',
-      projects: 'aegis4j, Cronos, Shine Tecnologia — veja a seção "Projetos" acima.',
-      experience: 'Mercado Livre → PicPay → TQI/PagSeguro → ... → TCU. Veja a seção "Experiência".',
-      contact: 'andrelrs.v@gmail.com — ou LinkedIn/GitHub no rodapé.',
-      sudo: 'Permissão negada. (relaxa, você não precisa de root nesse site)',
-      ls: 'sobre  projetos  experiencia  skills  contato',
-      pwd: '/home/andre/portfolio'
-    }
-
     var printLine = function (text, cls) {
       var p = document.createElement('p')
       if (cls) p.className = cls
@@ -319,31 +342,33 @@ window.onload = function () {
     }
 
     var runCommand = function (raw) {
+      var dict = TRANSLATIONS[getCurrentLang()]
       var cmd = raw.trim().toLowerCase()
       printLine('> ' + raw, 'cmd')
       if (!cmd) return
       if (cmd === 'help') {
-        printLine('comandos: help, whoami, skills, projects, experience, contact, ls, theme, clear, exit')
+        printLine(dict['console.helpText'])
         return
       }
       if (cmd === 'clear') { consoleOutput.innerHTML = ''; return }
       if (cmd === 'exit') { closeConsole(); return }
       if (cmd === 'theme') {
         themeToggle.click()
-        printLine('tema alternado.')
+        printLine(dict['console.themeToggled'])
         return
       }
-      if (Object.prototype.hasOwnProperty.call(COMMANDS, cmd)) {
-        printLine(COMMANDS[cmd])
+      var cmdKey = 'console.cmd.' + cmd
+      if (dict[cmdKey] !== undefined) {
+        printLine(dict[cmdKey])
         return
       }
-      printLine('comando não encontrado: ' + cmd + ' (tente "help")', 'err')
+      printLine(dict['console.notFoundPrefix'] + cmd + dict['console.notFoundSuffix'], 'err')
     }
 
     var openConsole = function () {
       consolePanel.hidden = false
       if (!consoleOutput.childElementCount) {
-        printLine('Digite "help" para ver os comandos disponíveis.')
+        printLine(TRANSLATIONS[getCurrentLang()]['console.intro'])
       }
       consoleInput.focus()
     }
